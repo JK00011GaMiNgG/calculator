@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Calculator</title>
+	<script src="main.js" defer></script>
+	<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.1.0/math.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+	<link href="styles.css" rel="stylesheet">
+</head>
+<body>
+	<div class="background" id="background"></div>
+	<div class="calculator">
+		<div id="scroll-container" style="overflow-x: auto; white-space: nowrap; width: 100%;">
+			<div class="display" id="display" style="display: inline-block; font-size: 2em; min-width: 100%; box-sizing: border-box; padding: 5px;">0</div>
+		</div>
+		<div class="buttons">
+			<button class="single" onclick="appendCharacter('+')">+</button>
+			<button class="single" onclick="appendCharacter('1')">1</button>
+			<button class="single" onclick="appendCharacter('2')">2</button>
+			<button class="single" onclick="appendCharacter('3')">3</button>
+
+			<button class="single" onclick="appendCharacter('-')">-</button>
+			<button class="single" onclick="appendCharacter('4')">4</button>
+			<button class="single" onclick="appendCharacter('5')">5</button>
+			<button class="single" onclick="appendCharacter('6')">6</button>
+
+			<button class="single" onclick="appendCharacter('×')">×</button>
+			<button class="single" onclick="appendCharacter('7')">7</button>
+			<button class="single" onclick="appendCharacter('8')">8</button>
+			<button class="single" onclick="appendCharacter('9')">9</button>
+
+			<button class="single" onclick="appendCharacter('÷')">÷</button>
+			<button class="single" onclick="appendCharacter('.')">.</button>
+			<button class="single" onclick="appendCharacter('0')">0</button>
+			<button class="single" onclick="delete_()">Del</button>
+
+			<button class="single-latex" onclick="appendCharacter('sqrt(')"><span id="latex-content">$$\sqrt{}$$</span></button>
+			<button class="single-latex" onclick="appendCharacter('^(')">y<span id="latex-content">$$\mathbf{^×}$$</span></button>
+			<button class="single-latex" onclick="appendCharacter('')"><span id="latex-content">WIP</span></button>
+			<button class="single-latex" onclick="appendCharacter('1/x')">1/x</button>
+
+			<button class="single" onclick="appendCharacter('(')">(</button>
+			<button class="single" onclick="appendCharacter(')')">)</button>
+			<button class="single" onclick="appendCharacter('π')">π</button>
+			<button class="single" onclick="appendCharacter('e')">e</button>
+
+			<button class="double-latex" onclick="setPage('info.html')">ⓘ</button>
+			<button class="double" onclick="clear_()">Clear</button>
+			<button class="quad" onclick="calculate()">=</button>
+		</div>
+	</div>
+</body>
+</html>
